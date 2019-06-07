@@ -1,15 +1,68 @@
 {
-  "checksum": "0cc961f41dbf4ff5ab5654751a4ba36e",
-  "root": "esy-libpsl-0.21.0@link-dev:./package.json",
+  "checksum": "d210d6b6a3314cc898732fb745313bf9",
+  "root": "esy-libpsl@link-dev:./package.json",
   "node": {
-    "esy-libpsl-0.21.0@link-dev:./package.json": {
-      "id": "esy-libpsl-0.21.0@link-dev:./package.json",
-      "name": "esy-libpsl-0.21.0",
+    "esy-zlib@github:esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3@d41d8cd9": {
+      "id":
+        "esy-zlib@github:esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3@d41d8cd9",
+      "name": "esy-zlib",
+      "version":
+        "github:esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3",
+      "source": {
+        "type": "install",
+        "source": [
+          "github:esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3"
+        ]
+      },
+      "overrides": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    "esy-python@github:esy-packages/esy-python#22a58395ae687852fee64ff6e752bd1354a4f343@d41d8cd9": {
+      "id":
+        "esy-python@github:esy-packages/esy-python#22a58395ae687852fee64ff6e752bd1354a4f343@d41d8cd9",
+      "name": "esy-python",
+      "version":
+        "github:esy-packages/esy-python#22a58395ae687852fee64ff6e752bd1354a4f343",
+      "source": {
+        "type": "install",
+        "source": [
+          "github:esy-packages/esy-python#22a58395ae687852fee64ff6e752bd1354a4f343"
+        ]
+      },
+      "overrides": [],
+      "dependencies": [
+        "esy-zlib@github:esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3@d41d8cd9",
+        "esy-libffi@github:esy-ocaml/libffi#599bc3567ecf839240977b6d9aaf0b80f983b5aa@d41d8cd9"
+      ],
+      "devDependencies": []
+    },
+    "esy-libpsl@link-dev:./package.json": {
+      "id": "esy-libpsl@link-dev:./package.json",
+      "name": "esy-libpsl",
       "version": "link-dev:./package.json",
       "source": {
         "type": "link-dev",
         "path": ".",
         "manifest": "package.json"
+      },
+      "overrides": [],
+      "dependencies": [
+        "esy-python@github:esy-packages/esy-python#22a58395ae687852fee64ff6e752bd1354a4f343@d41d8cd9"
+      ],
+      "devDependencies": []
+    },
+    "esy-libffi@github:esy-ocaml/libffi#599bc3567ecf839240977b6d9aaf0b80f983b5aa@d41d8cd9": {
+      "id":
+        "esy-libffi@github:esy-ocaml/libffi#599bc3567ecf839240977b6d9aaf0b80f983b5aa@d41d8cd9",
+      "name": "esy-libffi",
+      "version":
+        "github:esy-ocaml/libffi#599bc3567ecf839240977b6d9aaf0b80f983b5aa",
+      "source": {
+        "type": "install",
+        "source": [
+          "github:esy-ocaml/libffi#599bc3567ecf839240977b6d9aaf0b80f983b5aa"
+        ]
       },
       "overrides": [],
       "dependencies": [],

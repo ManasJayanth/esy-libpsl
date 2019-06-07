@@ -12,11 +12,15 @@
     },
     "build": [
       "chmod 755 ./configure",
+      "find ./ -exec touch -t 200905010101 {} +",
+      "ln -s #{esy-python.bin / 'python3'} #{self.bin / 'python'}",
       "./configure --disable-dependency-tracking --prefix=#{self.install} #{os == 'windows' ? '--host=x86_64-w64-mingw32' : ''}",
       "make",
       "make install"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "esy-python": "esy-packages/esy-python#22a58395ae687852fee64ff6e752bd1354a4f343"
+  },
   "resolutions": {}
 }
